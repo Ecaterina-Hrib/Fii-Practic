@@ -13,30 +13,35 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name , class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :distribution %>
-    <%= form.text_field :distribution %>
+    <%= form.text_field :distribution , class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.text_field :game_type , class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price , class: "form-control" %>
   </div>
+  <div class="field">
+    <%= form.label :stoc %>
+    <%= form.number_field :stoc , class: "form-control" %>
+  </div>
+ 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class:"btn btn-succes" %>
   </div>
 <% end %>

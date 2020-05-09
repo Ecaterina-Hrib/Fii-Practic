@@ -19,9 +19,11 @@
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-    <%#if account_signed_in %>
+    <%if account_signed_in? %>
 
     <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+    <% else %>
+    <% end %>
     <% end %>
 
     <%= render "devise/shared/links" %>

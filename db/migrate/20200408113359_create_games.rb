@@ -4,7 +4,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.references  :account
       t.string :name
       t.string :distribution
-      t.string :type
+      t.string :game_type
       t.text :description
       t.integer :price
       t.string :photo

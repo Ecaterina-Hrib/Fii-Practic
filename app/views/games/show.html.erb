@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Name:</strong>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @game.type %>
+  <%= @game.game_type %>
 </p>
 
 <p>
@@ -24,6 +24,11 @@
   <strong>Price:</strong>
   <%= @game.price %>
 </p>
+<p>
+  <strong>Stoc:</strong>
+  <%= @game.stoc %>
+</p>
+
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

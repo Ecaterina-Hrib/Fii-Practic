@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
+ 
   before_action :set_game, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_account!, only: [:new, :create, :destroy]
+   before_action :authenticate_account!, except: [:show, :index]
+  #before_filter :authorize, :except => :show
   # GET /games
   # GET /games.json
   def index
@@ -25,7 +27,7 @@ class GamesController < ApplicationController
   # POST /games.json
   def create
     @game = Game.new(game_params)
-    @game.account.id = current_account_id
+    #@game.account = current_account
 
     respond_to do |format|
       if @game.save
@@ -70,6 +72,7 @@ class GamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def game_params
-      params.require(:game).permit(:name, :distribution, :type, :description, :price)
+      params.require(:game).permit(:name, :distribution, :game_type, :description, :price,:stoc)
     end
+    
 end

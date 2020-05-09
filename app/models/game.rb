@@ -1,5 +1,6 @@
 class Game < ApplicationRecord
-    self.inheritance_column = :foo
-    attr_accessor :type
+    has_one_attached :image
+    validates :name, :price,:distribution, presence: true
+    
    
 end

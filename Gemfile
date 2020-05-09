@@ -6,14 +6,13 @@ gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'sassc-rails'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
+gem 'rails' , '~> 6.0.3.rc1' #, '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+gem 'pundit'
 # Use SCSS for stylesheets
-gem 'mailcatcher', '~> 0.6.5'
-
 #gem 'sass-rails', '>= 6'
 #gem 'rails-footnotes', '>=3.7.9' 
 #gem 'simple_form'
